@@ -3,7 +3,23 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
+    dups = []
+    numbers = {}
+    seen = {}
+    result= []
 
+    for x in arrays:
+        for c in x:
+            if c not in numbers:
+            
+                numbers[c] = True
+            else:
+                dups.append(c)
+                for a in dups:
+                    if a not in seen:
+                        result.append(a)
+                        seen[a] = True
+    # print(result)
     return result
 
 
